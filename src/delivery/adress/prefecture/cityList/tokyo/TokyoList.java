@@ -1,8 +1,9 @@
-package delivery.adress.place.prefectures.tokyo;
+package delivery.adress.prefecture.cityList.tokyo;
 
-import delivery.adress.place.prefectures.postCode.PostCode;
+import delivery.adress.prefecture.City;
+import delivery.adress.prefecture.postCode.PostCode;
 
-enum TokyoList {
+public enum TokyoList implements City {
     KATUSHIKAKU("葛飾区", new PostCode("333-1111")),
     KOUTOUKU("江東区", new PostCode("333-2222")),
     ;
@@ -16,6 +17,11 @@ enum TokyoList {
 
     public PostCode postCode(){
         return this.postCode;
+    }
+
+    @Override
+    public String address() {
+        return this.name;
     }
 
     @Override

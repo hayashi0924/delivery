@@ -1,4 +1,4 @@
-package delivery.adress.place.prefectures.postCode;
+package delivery.adress.prefecture.postCode;
 
 public class PostCode {
     private final String number;
@@ -12,6 +12,17 @@ public class PostCode {
 
     public String toString(){
         return this.number;
+    }
+
+    public boolean equals(Object o){
+        if(!(o instanceof PostCode)){
+            return false;
+        }
+        PostCode object = (PostCode) o;
+        if(!(this.number.equals(object.number))){
+            return false;
+        }
+        return true;
     }
 
 }

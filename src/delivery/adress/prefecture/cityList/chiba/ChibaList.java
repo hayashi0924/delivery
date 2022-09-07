@@ -1,8 +1,8 @@
-package delivery.adress.place.prefectures.chiba;
+package delivery.adress.prefecture.cityList.chiba;
 
-import delivery.adress.place.prefectures.postCode.PostCode;
+import delivery.adress.prefecture.postCode.PostCode;
 
-enum ChibaList {
+public enum ChibaList {
     CHIBASHI("千葉市", new PostCode("111-1111")),
     KISARAZUSHI("木更津市", new PostCode("111-2222")),
     ;
@@ -16,6 +16,10 @@ enum ChibaList {
 
     public PostCode postCode(){
         return this.postCode;
+    }
+
+    public String address() {
+        return this.name;
     }
 
     @Override
